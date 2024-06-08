@@ -34,7 +34,7 @@ function loadingAnimation() {
     tl.to("#loader", {
         opacity: 0,
         duration: 0.4,
-        delay: 3
+        delay: 2.8
     })
 
     tl.from("#page1", {
@@ -69,4 +69,4 @@ function cursorAnimation() {
 }
 
 loadingAnimation();
-cursorAnimation();
+// cursorAnimation();

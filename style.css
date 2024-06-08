@@ -22,16 +22,11 @@ html,body {
     transform: translate(-50%,-50%);
 }
 
-#main {
-    position: relative;
-    background-color: black;
-}
-
 #loader {
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     background-color: #0B0B0B;
     padding: 20vh 10vw;
 }
@@ -105,10 +100,18 @@ html,body {
 }
 
 
+
+#main {
+    position: relative;
+    background-color: black;
+    z-index: 99;
+}
+
 #page1 {
     height: 100vh;
     width: 100%;
     background-color: #151515;
+    z-index: 100;
 }
 
 #page1 #nav {
@@ -138,13 +141,21 @@ html,body {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 999;
 }
 
-.hero h1, .hero h2 {
+.hero h1 {
     font-size: 7vw;
     text-transform: uppercase;
     line-height: 7vw;
+}
+
+.hero h2 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    border-bottom: 0.5vw solid #fff;
+    /* padding-bottom: 0.8vw ;
+    transition: all ease 0.3s; */
 }
 
 .hero:nth-child(2) {
@@ -155,4 +166,206 @@ html,body {
     -webkit-text-stroke: 2px #fff;
     color: transparent;
     font-weight: 500;
+    border-bottom: 0.5vw solid #151515;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+    background-color: #151515;
+}
+
+#video-container {
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#video-container img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-cursor {
+    height: 8.5vw;
+    width: 8.5vw;
+    background-color: #FFA63D;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#video-cursor i {
+    font-size: 2vw;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 7vh 0;
+    background-color: #151515;
+}
+
+#page4-content {
+    width: 68vw;
+    position: relative;
+    margin-left: 28%;
+}
+
+#page4-content h1 {
+    text-transform: uppercase;
+    font-size: 6vw;
+}
+
+#page4-content #underline {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+} 
+
+#page4-content > p {
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+
+#page4-flex {
+    display: flex;
+}
+#page4-flex img {
+    width: 48%;
+}
+#page4-flex p {
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+
+#page4-blue-div {
+    background-color:  #3F7DF4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 26vw;
+}
+
+.blue-div-elem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.7vw 0;
+    border-bottom: 2px solid #ffffff94;
+}
+
+.blue-div-elem h4 {
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+.blue-div-elem p {
+    width: 40%;
+    font-size: 0.8w;
+}
+
+#page4-content #underline2 {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 5vw;
+} 
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+.elem {
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem2 {
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.elem2 h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem span {
+    font-style: italic;
+    font-family: "Silk Serif";
+    color: transparent;
+}
+
+.elem2 span {
+    font-style: italic;
+    font-family: "Silk Serif";
+    color: transparent;
 }
