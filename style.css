@@ -181,7 +181,7 @@ body {
     border-bottom: 0.5vw solid #151515;
 }
 
-#hero3 {
+#hero3,#hero2,#hero4 {
     z-index: 999;
     position: relative;
 }
